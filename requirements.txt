@@ -15,3 +15,4 @@ plotly
 requests
 scapy
 streamlit-autorefresh
+websocket-client
