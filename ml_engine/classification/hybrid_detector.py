@@ -15,7 +15,7 @@ class NeuralShieldDetector:
 
         # Load preprocessing pipeline
         self.preprocessor = joblib.load(
-            "data/processed/preprocessor.joblib"
+            "models/preprocessor.joblib"
         )
 
         # Load binary classifier
