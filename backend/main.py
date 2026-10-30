@@ -2,9 +2,9 @@
 from fastapi import FastAPI
 from datetime import datetime
 
+from backend.routes.detection import router as detection_router
 from backend.routes.alerts import router as alerts_router
 from backend.routes.monitor import router as monitor_router
-
 
 app = FastAPI(
     title="NeuralShield API",
@@ -12,8 +12,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.include_router(detection_router)
 app.include_router(alerts_router)
 app.include_router(monitor_router)
+
 
 @app.get("/")
 def home():

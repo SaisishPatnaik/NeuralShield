@@ -10,7 +10,12 @@ from components.live_monitor import render_live_monitor
 # ============================================================
 # CONFIGURATION
 # ============================================================
-API_URL = "http://127.0.0.1:8000"
+import os
+
+API_URL = os.getenv(
+    "NEURALSHIELD_API_URL",
+    "http://127.0.0.1:8000"
+).rstrip("/")
 
 st.set_page_config(
     page_title="NEURALSHIELD | AI NETWORK DEFENSE",
