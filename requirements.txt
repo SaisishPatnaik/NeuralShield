@@ -1,0 +1,16 @@
+
+fastapi
+uvicorn[standard]
+pymongo[srv]
+python-dotenv
+pydantic
+numpy
+pandas
+scikit-learn
+xgboost
+joblib
+tensorflow
+streamlit
+plotly
+requests
+scapy
